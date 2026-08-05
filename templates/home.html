@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Job Application Tracker{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <h1 class="fw-bold">Job Application Tracker</h1>
+    <p class="text-muted">Keep every application you've sent in one organized place.</p>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card stat-card total h-100">
+            <div class="card-body text-center">
+                <div class="stat-value">{{ total_count }}</div>
+                <div class="text-muted">Total Applications</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card stat-card applied h-100">
+            <div class="card-body text-center">
+                <div class="stat-value">{{ status_counts.Applied }}</div>
+                <div class="text-muted">Applied</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card stat-card interview h-100">
+            <div class="card-body text-center">
+                <div class="stat-value">{{ status_counts.Interview }}</div>
+                <div class="text-muted">Interview</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card stat-card offer h-100">
+            <div class="card-body text-center">
+                <div class="stat-value">{{ status_counts.Offer }}</div>
+                <div class="text-muted">Offer</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card stat-card accepted h-100">
+            <div class="card-body text-center">
+                <div class="stat-value">{{ status_counts.Accepted }}</div>
+                <div class="text-muted">Accepted</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card stat-card rejected h-100">
+            <div class="card-body text-center">
+                <div class="stat-value">{{ status_counts.Rejected }}</div>
+                <div class="text-muted">Rejected</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex gap-2">
+    <a href="{% url 'job_create' %}" class="btn btn-primary">+ Add Application</a>
+    <a href="{% url 'job_list' %}" class="btn btn-outline-primary">View All Applications</a>
+</div>
+{% endblock %}
