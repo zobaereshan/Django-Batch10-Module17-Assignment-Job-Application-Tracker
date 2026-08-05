@@ -1,0 +1,67 @@
+:root {
+    --brand-primary: #3454d1;
+    --brand-primary-dark: #263a94;
+    --brand-bg: #f5f7fb;
+    --brand-applied: #6c757d;
+    --brand-interview: #f0ad4e;
+    --brand-offer: #5bc0de;
+    --brand-accepted: #28a745;
+    --brand-rejected: #dc3545;
+}
+
+body {
+    background-color: var(--brand-bg);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app-navbar {
+    background: linear-gradient(90deg, var(--brand-primary-dark), var(--brand-primary));
+}
+
+.app-navbar .nav-link.active {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.app-footer {
+    background-color: #fff;
+    border-top: 1px solid #e3e6ec;
+}
+
+.stat-card {
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.15s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-card .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stat-card.total { border-top: 4px solid var(--brand-primary); }
+.stat-card.applied { border-top: 4px solid var(--brand-applied); }
+.stat-card.interview { border-top: 4px solid var(--brand-interview); }
+.stat-card.offer { border-top: 4px solid var(--brand-offer); }
+.stat-card.accepted { border-top: 4px solid var(--brand-accepted); }
+.stat-card.rejected { border-top: 4px solid var(--brand-rejected); }
+
+.badge-status-applied { background-color: var(--brand-applied); }
+.badge-status-interview { background-color: var(--brand-interview); color: #212529; }
+.badge-status-offer { background-color: var(--brand-offer); color: #212529; }
+.badge-status-accepted { background-color: var(--brand-accepted); }
+.badge-status-rejected { background-color: var(--brand-rejected); }
+
+.card-header-brand {
+    background-color: var(--brand-primary);
+    color: #fff;
+}
+
+.table thead {
+    background-color: #eef1f8;
+}
